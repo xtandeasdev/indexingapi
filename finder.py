@@ -1,3 +1,5 @@
-print("first update from github")
-print("other update from github")
-d = 1
+from updater import update
+import os
+update(os.path.basename(__file__))
+print("asdkdaskdask")
+print("askdkas")

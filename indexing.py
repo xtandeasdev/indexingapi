@@ -91,7 +91,7 @@ try:
 
     def indexURL(urls, http):
         if output:
-            file = open(output, "w")
+            file = open(output, "w", encoding="utf-8")
         ENDPOINT = "https://indexing.googleapis.com/v3/urlNotifications:publish"
 
         for u in urls:

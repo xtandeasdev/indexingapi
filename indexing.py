@@ -6,6 +6,7 @@ import httplib2
 import json
 import os
 import time
+import sys
 from colorama import Fore, Back, Style, init
 import argparse
 parser = argparse.ArgumentParser(description="IndexingApi")
@@ -27,7 +28,7 @@ parser.add_argument(
 parser.add_argument(
     "-o", "--Output", help="Indexlenen siteleri yazdırmak istediğiniz dosya adı.", required=False
 )
-argument = parser.parse_args()
+argument = parser.parse_args(sys.argv[2:])
 website_url = argument.Site
 updated = argument.Update
 count = argument.Count

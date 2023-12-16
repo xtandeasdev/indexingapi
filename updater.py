@@ -1,7 +1,6 @@
 import requests
 import os
 def get_file(file_name):
-    print(file_name)
     req = requests.get("https://raw.githubusercontent.com/xtandeasdev/indexingapi/main/"+file_name)
     return req
 def exists(file_name):

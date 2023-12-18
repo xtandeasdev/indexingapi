@@ -25,3 +25,4 @@ if sys.argv[1] != None:
         print("Böyle bir sistem bulunmamakta hangisi kullanmak istemiştiniz?\n"+systems)
 else:
     print("Bir sistem seçmek zorundasınız örn. python index.py indexing\nSistemler: "+systems)
+    

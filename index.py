@@ -14,7 +14,7 @@ def check_connection():
 if check_connection() == False:
     print("Bu programı kullanabilmek için internet bağlantısına ihtiyacınız var.")
     exit()
-check_updates = input("Güncellemeleri denetlemek istiyor musunuz? (E/H): (Varsayılan: Denetleme")
+check_updates = input("Güncellemeleri denetlemek istiyor musunuz? (E/H): (Varsayılan: Denetleme) ")
 if check_updates.lower() == "y" or check_updates.lower() == "e" or check_updates.lower() == "yes" or check_updates.lower() == "evet":
     for dir in dirs:
         update(dir)

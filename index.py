@@ -1,13 +1,24 @@
 import argparse
+import requests
 from updater import update
 import sys
 import os
 systems = "Indexing\nFinder"
 dirs = os.listdir()
+def check_connection():
+    try: 
+        r = requests.get("https://www.google.com",timeout=10)
+        return True
+    except:
+        return False
+if check_connection() == False:
+    print("Bu programı kullanabilmek için internet bağlantısına ihtiyacınız var.")
+    exit()
 for dir in dirs:
     update(dir)
-file = os.path.isfile(sys.argv[1]+".py")
+
 if sys.argv[1]:
+    file = os.path.isfile(sys.argv[1]+".py")
     if file:
         exec(open(sys.argv[1]+".py", "r", encoding="utf-8").read())
     else:

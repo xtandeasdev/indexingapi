@@ -2,7 +2,7 @@ import requests
 import json
 from bs4 import BeautifulSoup
 
-from termcolor import colored
+from colorama import Fore, Back, Style, init
 
 headers = {
     "User-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36"
@@ -26,7 +26,7 @@ for key in keys:
                 "https://www.google.com/search", params=params, headers=headers
             )
             if response.status_code == 429:
-                print(colored("Çok fazla istekten dolayı google engelledi.", "blue"))
+                print(Fore.BLUE+"Çok fazla istekten dolayı google engelledi.")
                 break
             soup = BeautifulSoup(response.text, "html.parser")
             for result in soup.select(".tF2Cxc"):
@@ -38,17 +38,15 @@ for key in keys:
                     text = "{} siteniz {} keyinde {} sırada bulundu.\n".format(
                         site, key, sira
                     )
-                    print(colored(text, "white"))
+                    print(Fore.WHITE+text)
                     f.write("{}\n".format(text))
                 else:
                     text = "{} sitesi {} keyinde {}. sırada bulundu.".format(
                         link, key, sira
                     )
                     print(
-                        colored(
-                            text,
-                            "red",
-                        )
+                        Fore.RED+
+                            text
                     )
                     f.write("{}\n".format(text))
 

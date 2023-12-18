@@ -36,7 +36,7 @@ for key in keys:
                 if str.find(link, site) > 1:
                     bulundu = True
                     text = "{} siteniz {} keyinde {} sırada bulundu.\n".format(
-                        site, key, sira
+                        link, key, sira
                     )
                     print(Fore.WHITE+text)
                     f.write("{}\n".format(text))

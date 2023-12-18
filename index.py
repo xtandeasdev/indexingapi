@@ -17,7 +17,7 @@ if check_connection() == False:
 for dir in dirs:
     update(dir)
 
-if sys.argv[1]:
+if sys.argv[1] != None:
     file = os.path.isfile(sys.argv[1]+".py")
     if file:
         exec(open(sys.argv[1]+".py", "r", encoding="utf-8").read())

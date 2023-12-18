@@ -15,7 +15,7 @@ def is_stable(file_name):
         localfile = open(file_name, "r", encoding="utf-8")
         if localfile.readable():
             if file.text == localfile.read():
-                return True
+                return  True
             else:
                 return False
     return False

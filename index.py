@@ -22,3 +22,4 @@ if len(sys.argv) >= 2:
         print("Böyle bir sistem bulunmamakta hangisi kullanmak istemiştiniz?\n"+systems)
 else:
     print("Bir sistem seçmek zorundasınız örn. python index.py indexing\nSistemler: "+systems)
+    

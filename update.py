@@ -30,3 +30,6 @@ def update(file_name):
             localfile = open(file_name, "w", encoding="utf-8")
             localfile.flush()
             localfile.write(file.text.encode("utf-8").decode("utf-8"))
+dirs = os.listdir()
+for dir in dirs:
+    update(dir)

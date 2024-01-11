@@ -15,6 +15,7 @@ site = input("site: ")
 pages = int(input("page: "))
 pages = (pages + 1) * 10
 now = datetime.now()
+
 f = open("{}-{}.txt".format(site,f"{now.year}-{now.month}-{now.day}-{now.hour}{now.minute}"), "w")
 f.flush()
 for key in keys:

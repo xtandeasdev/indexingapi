@@ -1,7 +1,7 @@
 import requests
 import json
 from bs4 import BeautifulSoup
-
+from datetime import datetime
 from colorama import Fore, Back, Style, init
 
 headers = {
@@ -14,7 +14,7 @@ keys = keys.split(",")
 site = input("site: ")
 pages = int(input("page: "))
 pages = (pages + 1) * 10
-f = open("{}.txt".format(site), "w")
+f = open("{}-{}.txt".format(site,f"{now.year}-{now.month}-{now.day}-{now.hour}{now.minute}"), "w")
 f.flush()
 for key in keys:
     sira = 0

@@ -122,37 +122,13 @@ try:
                         result["urlNotificationMetadata"]["url"]
                         )
                     )
-                    print(
-                        Back.GREEN
-                        + Fore.WHITE
-                        + "Indexlenen Url: {}".format(
-                            result["urlNotificationMetadata"]["latestRemove"]["url"]
-                        )
-                    )
-                    print(
-                        Back.GREEN
-                        + Fore.WHITE
-                        + "Indexleme Türü: URL_SILINDI"
-                    )
-                    print(
-                        Back.GREEN
-                        + Fore.WHITE
-                        + "Indexlenme Zamanı: {}".format(
-                            result["urlNotificationMetadata"]["latestRemove"]["notifyTime"]
-                        )
-                    )
+                   
                     if output:
                         
                         file.writelines("Gönderilen URL: {}\n".format(
                             result["urlNotificationMetadata"]["url"]
                         ))
-                        file.writelines("Indexlenen URL: {}\n".format(
-                            result["urlNotificationMetadata"]["latestRemove"]["url"]
-                        ))
-                        file.writelines("Indexlenme Türü: URL_SILINDI\n")
-                        file.writelines("Indexlenme Zamanı: {}\n".format(
-                            result["urlNotificationMetadata"]["latestRemove"]["notifyTime"]
-                        ))
+            
                         file.writelines("\n")
                         
                         
@@ -163,25 +139,7 @@ try:
                         result["urlNotificationMetadata"]["url"]
                         )
                     )
-                    print(
-                        Back.GREEN
-                        + Fore.WHITE
-                        + "Indexlenen URL: {}".format(
-                            result["urlNotificationMetadata"]["latestUpdate"]["url"]
-                        )
-                    )
-                    print(
-                        Back.GREEN
-                        + Fore.WHITE
-                        + "Indexlenme Türü: URL_EKLENDI"
-                    )
-                    print(
-                        Back.GREEN
-                        + Fore.WHITE
-                        + "Indexlenme Zamanı: {}".format(
-                            result["urlNotificationMetadata"]["latestUpdate"]["notifyTime"]
-                        )
-                    )
+                    
                     if output:
                         file.writelines("Gönderilen URL: {}\n".format(
                             result["urlNotificationMetadata"]["url"]
